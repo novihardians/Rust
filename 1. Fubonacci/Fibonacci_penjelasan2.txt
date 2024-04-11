@@ -1,0 +1,62 @@
+def fibo(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    return fibo(n - 1) + fibo(n - 2)  
+    # Looping menurun ke kondisi terkecil # karena fungsi melibatkan fungsi lagi
+
+print(fibo(6))
+
+PENJELASAN :
+[A]
+fibo(6) = fibo(6 - 1) + fibo(6 - 2)
+	= fibo(5) + fibo(4) // masih Loop karena angka pasti blm dapat
+
+bedah A
+[B]
+fibo(5) = fibo(5 - 1) + fibo(5 - 2)
+	= fibo(4) + fibo(3) // masih Loop karena angka pasti blm dapat
+
+bedah B
+[C]
+fibo(4) = fibo(4 - 1) + fibo(4 - 2)
+	= fibo(3) + fibo(2) // masih Loop karena angka pasti blm dapat
+
+bedah C
+[D]
+fibo(3) = fibo(3 - 1) + fibo(3 - 2)
+	= fibo(2) + fibo(1) // masih loop karena fibo(2) blm dapat
+	= fibo(2) + 1
+
+bedah D
+[E]
+fibo(2) = fibo(2 - 1) + fibo(2 - 2)
+	= fibo(1) + fibo(0)
+	= 1 + 0 
+	= 1 (sudah dapat nilai pasti)
+
+
+Kembali ke [D]
+fibo(3) = fibo(2) + 1
+        = 1 + 1
+	= 2
+
+Kembali ke [C]
+fibo(4) = fibo(3) + fibo(2)
+        = 2 + 1
+	= 3
+
+Kembali ke [B]
+fibo(5) = fibo(4) + fibo(3)
+        = 3 + 2
+	= 5
+
+Kembali ke [C]
+fibo(6) = fibo(5) + fibo(4)
+        = 5 + 3
+	= 8
+
+
+
+
